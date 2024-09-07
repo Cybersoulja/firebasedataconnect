@@ -1,0 +1,130 @@
+extend type Mutation {
+  """
+  Insert a single Email into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  email_insert(data: Email_Data!): Email_Key! @fdc_generated(from: "Email", purpose: INSERT_SINGLE)
+  """
+  Insert a single EmailMeta into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  emailMeta_insert(data: EmailMeta_Data!): EmailMeta_Key! @fdc_generated(from: "EmailMeta", purpose: INSERT_SINGLE)
+  """
+  Insert a single Recipient into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  recipient_insert(data: Recipient_Data!): Recipient_Key! @fdc_generated(from: "Recipient", purpose: INSERT_SINGLE)
+  """
+  Insert a single User into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insert(data: User_Data!): User_Key! @fdc_generated(from: "User", purpose: INSERT_SINGLE)
+  """
+  Insert Email entries into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  email_insertMany(data: [Email_Data!]!): [Email_Key!]! @fdc_generated(from: "Email", purpose: INSERT_MULTIPLE)
+  """
+  Insert EmailMeta entries into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  emailMeta_insertMany(data: [EmailMeta_Data!]!): [EmailMeta_Key!]! @fdc_generated(from: "EmailMeta", purpose: INSERT_MULTIPLE)
+  """
+  Insert Recipient entries into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  recipient_insertMany(data: [Recipient_Data!]!): [Recipient_Key!]! @fdc_generated(from: "Recipient", purpose: INSERT_MULTIPLE)
+  """
+  Insert User entries into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insertMany(data: [User_Data!]!): [User_Key!]! @fdc_generated(from: "User", purpose: INSERT_MULTIPLE)
+  """
+  Insert or update a single Email into the table, based on the primary key. Returns the key of the newly inserted Email.
+  """
+  email_upsert(data: Email_Data!): Email_Key! @fdc_generated(from: "Email", purpose: UPSERT_SINGLE)
+  """
+  Insert or update a single EmailMeta into the table, based on the primary key. Returns the key of the newly inserted EmailMeta.
+  """
+  emailMeta_upsert(data: EmailMeta_Data!): EmailMeta_Key! @fdc_generated(from: "EmailMeta", purpose: UPSERT_SINGLE)
+  """
+  Insert or update a single Recipient into the table, based on the primary key. Returns the key of the newly inserted Recipient.
+  """
+  recipient_upsert(data: Recipient_Data!): Recipient_Key! @fdc_generated(from: "Recipient", purpose: UPSERT_SINGLE)
+  """
+  Insert or update a single User into the table, based on the primary key. Returns the key of the newly inserted User.
+  """
+  user_upsert(data: User_Data!): User_Key! @fdc_generated(from: "User", purpose: UPSERT_SINGLE)
+  """
+  Insert or update Email entries into the table, based on the primary key. Returns the key of the newly inserted Email.
+  """
+  email_upsertMany(data: [Email_Data!]): [Email_Key!]! @fdc_generated(from: "Email", purpose: UPSERT_MULTIPLE)
+  """
+  Insert or update EmailMeta entries into the table, based on the primary key. Returns the key of the newly inserted EmailMeta.
+  """
+  emailMeta_upsertMany(data: [EmailMeta_Data!]): [EmailMeta_Key!]! @fdc_generated(from: "EmailMeta", purpose: UPSERT_MULTIPLE)
+  """
+  Insert or update Recipient entries into the table, based on the primary key. Returns the key of the newly inserted Recipient.
+  """
+  recipient_upsertMany(data: [Recipient_Data!]): [Recipient_Key!]! @fdc_generated(from: "Recipient", purpose: UPSERT_MULTIPLE)
+  """
+  Insert or update User entries into the table, based on the primary key. Returns the key of the newly inserted User.
+  """
+  user_upsertMany(data: [User_Data!]): [User_Key!]! @fdc_generated(from: "User", purpose: UPSERT_MULTIPLE)
+  """
+  Update a single Email based on `id` or `key`, setting columns specified in `data`. Returns `null` if not found.
+  """
+  email_update(id: UUID, key: Email_Key, data: Email_Data!): Email_Key @fdc_generated(from: "Email", purpose: UPDATE_SINGLE)
+  """
+  Update a single EmailMeta based on `id` or `key`, setting columns specified in `data`. Returns `null` if not found.
+  """
+  emailMeta_update(key: EmailMeta_Key, data: EmailMeta_Data!): EmailMeta_Key @fdc_generated(from: "EmailMeta", purpose: UPDATE_SINGLE)
+  """
+  Update a single Recipient based on `id` or `key`, setting columns specified in `data`. Returns `null` if not found.
+  """
+  recipient_update(key: Recipient_Key, data: Recipient_Data!): Recipient_Key @fdc_generated(from: "Recipient", purpose: UPDATE_SINGLE)
+  """
+  Update a single User based on `id` or `key`, setting columns specified in `data`. Returns `null` if not found.
+  """
+  user_update(key: User_Key, data: User_Data!): User_Key @fdc_generated(from: "User", purpose: UPDATE_SINGLE)
+  """
+  Update Email entries matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  email_updateMany(where: Email_Filter, all: Boolean = false, data: Email_Data!): Int! @fdc_generated(from: "Email", purpose: UPDATE_MULTIPLE)
+  """
+  Update EmailMeta entries matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  emailMeta_updateMany(where: EmailMeta_Filter, all: Boolean = false, data: EmailMeta_Data!): Int! @fdc_generated(from: "EmailMeta", purpose: UPDATE_MULTIPLE)
+  """
+  Update Recipient entries matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  recipient_updateMany(where: Recipient_Filter, all: Boolean = false, data: Recipient_Data!): Int! @fdc_generated(from: "Recipient", purpose: UPDATE_MULTIPLE)
+  """
+  Update User entries matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  user_updateMany(where: User_Filter, all: Boolean = false, data: User_Data!): Int! @fdc_generated(from: "User", purpose: UPDATE_MULTIPLE)
+  """
+  Delete a single Email based on `id` or `key` and return its key (or `null` if not found).
+  """
+  email_delete(id: UUID, key: Email_Key): Email_Key @fdc_generated(from: "Email", purpose: DELETE_SINGLE)
+  """
+  Delete a single EmailMeta based on `id` or `key` and return its key (or `null` if not found).
+  """
+  emailMeta_delete(key: EmailMeta_Key): EmailMeta_Key @fdc_generated(from: "EmailMeta", purpose: DELETE_SINGLE)
+  """
+  Delete a single Recipient based on `id` or `key` and return its key (or `null` if not found).
+  """
+  recipient_delete(key: Recipient_Key): Recipient_Key @fdc_generated(from: "Recipient", purpose: DELETE_SINGLE)
+  """
+  Delete a single User based on `id` or `key` and return its key (or `null` if not found).
+  """
+  user_delete(key: User_Key): User_Key @fdc_generated(from: "User", purpose: DELETE_SINGLE)
+  """
+  Delete Email entries matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  email_deleteMany(where: Email_Filter, all: Boolean = false): Int! @fdc_generated(from: "Email", purpose: DELETE_MULTIPLE)
+  """
+  Delete EmailMeta entries matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  emailMeta_deleteMany(where: EmailMeta_Filter, all: Boolean = false): Int! @fdc_generated(from: "EmailMeta", purpose: DELETE_MULTIPLE)
+  """
+  Delete Recipient entries matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  recipient_deleteMany(where: Recipient_Filter, all: Boolean = false): Int! @fdc_generated(from: "Recipient", purpose: DELETE_MULTIPLE)
+  """
+  Delete User entries matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  user_deleteMany(where: User_Filter, all: Boolean = false): Int! @fdc_generated(from: "User", purpose: DELETE_MULTIPLE)
+}

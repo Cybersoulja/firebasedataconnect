@@ -1,0 +1,12 @@
+extend type Email {
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Email", purpose: IMPLICIT_KEY_FIELD)
+  fromUid: String! @fdc_generated(from: "Email.from", purpose: IMPLICIT_REF_FIELD)
+}
+extend type EmailMeta {
+  userUid: String! @fdc_generated(from: "EmailMeta.user", purpose: IMPLICIT_REF_FIELD)
+  emailId: UUID! @fdc_generated(from: "EmailMeta.email", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Recipient {
+  emailId: UUID! @fdc_generated(from: "Recipient.email", purpose: IMPLICIT_REF_FIELD)
+  userUid: String! @fdc_generated(from: "Recipient.user", purpose: IMPLICIT_REF_FIELD)
+}

@@ -1,0 +1,42 @@
+I0907 14:50:07.596135    1847 load.go:36] Reloading schema and connectors...
+I0907 14:50:07.683061    1847 control.go:43] [engine.Service /emulator/local a64e] UpdateSchema(): done sources: schema/schema.gql [506B] 
+I0907 14:50:07.686183    1847 control.go:71] [engine.Service /emulator/local a64e] UpdateConnector(email): done sources: connector/queries.gql [1281B] connector/mutations.gql [693B] 
+I0907 14:50:07.795294    1847 codegen.go:74] [connector "email" javascriptSdk] Generating sources into "/home/user/firebasedataconnect/email-app/email-generated"
+I0907 14:50:07.802920    1847 collector.go:108] connector "email" javascriptSdk Wrote into "/home/user/firebasedataconnect/email-app/email-generated"
+Generated sources: esm/index.esm.js [3445B] esm/package.json [17B] index.cjs.js [3981B] package.json [618B] index.d.ts [9042B] 
+I0907 14:50:07.803062    1847 installsdk.go:121] generate.javascriptSdk.packageJsonDir is not specified, skipping automatic installation of JS package
+I0907 14:50:07.825130    1847 load.go:57] Finished reloading
+I0907 14:50:07.828554    1847 dev.go:79] Listening on address (HTTP + gRPC): 127.0.0.1:9399
+I0907 14:50:10.270685    1847 engine.go:145] [engine.Service /emulator/local a64e] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+W0907 14:50:11.329705    1847 engine.go:143] [engine.Service /emulator/local a64e] ExecuteQuery ListInbox: failed with explicit status error: rpc error: code = Unavailable desc = service "local" is not configured. A PostgreSQL connection string is required for database operations.. Connector: email
+Auth: public
+Variables:
+{
+   "uid": "user_tyler"
+ }
+Status: rpc error: code = Unavailable desc = service "local" is not configured. A PostgreSQL connection string is required for database operations.
+sources: connector/mutations.gql [693B] connector/queries.gql [1281B] 
+W0907 14:50:11.760166    1847 engine.go:143] [engine.Service /emulator/local a64e] ExecuteQuery ListInbox: failed with explicit status error: rpc error: code = Unavailable desc = service "local" is not configured. A PostgreSQL connection string is required for database operations.. Connector: email
+Auth: public
+Variables:
+{
+   "uid": "user_tyler"
+ }
+Status: rpc error: code = Unavailable desc = service "local" is not configured. A PostgreSQL connection string is required for database operations.
+sources: connector/queries.gql [1281B] connector/mutations.gql [693B] 
+W0907 14:50:14.024889    1847 engine.go:143] [engine.Service /emulator/local a64e] ExecuteQuery ListInbox: failed with explicit status error: rpc error: code = Unavailable desc = service "local" is not configured. A PostgreSQL connection string is required for database operations.. Connector: email
+Auth: public
+Variables:
+{
+   "uid": "user_tyler"
+ }
+Status: rpc error: code = Unavailable desc = service "local" is not configured. A PostgreSQL connection string is required for database operations.
+sources: connector/mutations.gql [693B] connector/queries.gql [1281B] 
+W0907 14:50:14.027679    1847 engine.go:143] [engine.Service /emulator/local a64e] ExecuteQuery ListInbox: failed with explicit status error: rpc error: code = Unavailable desc = service "local" is not configured. A PostgreSQL connection string is required for database operations.. Connector: email
+Auth: public
+Variables:
+{
+   "uid": "user_tyler"
+ }
+Status: rpc error: code = Unavailable desc = service "local" is not configured. A PostgreSQL connection string is required for database operations.
+sources: connector/mutations.gql [693B] connector/queries.gql [1281B] 
